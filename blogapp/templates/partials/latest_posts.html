@@ -1,0 +1,7 @@
+<div>
+    <h3>lasts Posts: </h3>
+    {% for post in l_posts %}
+        <p><a href="{{ post.get_absolute_url }}">{{ post.title }}: {{ post.publish|date:"SHORT_DATETIME_FORMAT"}}</a></p>
+
+    {% endfor %}
+</div>

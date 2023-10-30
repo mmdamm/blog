@@ -1,0 +1,13 @@
+{% extends 'parents/base.html' %}
+{% load blog_tags %}
+{% block title %}edit account{% endblock %}
+{% block content %}
+    <p>please edit your information:</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ account_form.as_p }}
+        <input type="submit" value="Enter">
+    </form>
+
+{% endblock %}

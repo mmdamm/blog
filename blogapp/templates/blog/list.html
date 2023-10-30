@@ -1,0 +1,34 @@
+{% extends 'parents/base.html' %}
+{% load blog_tags %}
+{% block title %}post list{% endblock %}
+{% block content %}
+
+<h1 class="post-list">post list</h1>
+
+<ol style="--length: {{ posts|length }}" role="list">
+    {% for post in posts %}
+        <li style="--i: {{ forloop.counter }}">
+        <h3 class="post-title">
+        <a href="{{post.get_absolute_url}}">{{ post.title }}</a>
+        </h3>
+        <p class="descr"> {{ post.description | truncatewords:4 |cansor }}</p>
+        <img src="{{ post.images.first.image_file.url }}" alt="{{ post.images.first.title }}">
+        </li>
+    {% endfor %}
+</ol>
+    {% if category %}
+        <h4><a href="{% url 'blog:post_list' %}" >posts list of {{ category }}</a></h4>
+    {% else %}
+        <h4><a href="{% url 'blog:post_list' %}" >post list</a></h4>
+    {% endif %}
+    <h3>Categories:</h3>
+    <h4><a href="{% url 'blog:post_list_category' 'PL' %}">Programmin Language</a></h4>
+    <h4><a href="{% url 'blog:post_list_category' 'BC' %}">Block Chain</a></h4>
+    <h4><a href="{% url 'blog:post_list_category' 'TL' %}">Technology</a></h4>
+    <h4><a href="{% url 'blog:post_list_category' 'OT' %}">Other</a></h4>
+
+
+
+    {% include "partials/pagination.html" with page=posts %}
+
+{% endblock %}

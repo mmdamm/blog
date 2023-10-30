@@ -1,0 +1,19 @@
+{% extends 'parents/base.html' %}
+{% load blog_tags %}
+{% block title %}post list{% endblock %}
+{% block content %}
+    <h3>Static:</h3>
+    <p>Number of post: {% total_posts %} </p>
+    <p>Number  Comment: {% total_comments %}</p>
+    <p>Date the last post: {% last_post_date %} </p>
+    <h3>Post with the long reading time:</h3>{% longest_reading_time %}
+    <h3>Post with the short reading time:</h3>{% shortest_reading_time %}
+    {% latest_posts %}
+
+    <h3>The most active Users: </h3><p>{% popular_user %}</p>
+
+    {% random_post %}
+
+
+
+{% endblock %}

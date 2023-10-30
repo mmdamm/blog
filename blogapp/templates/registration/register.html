@@ -1,0 +1,12 @@
+{% extends 'parents/base.html' %}
+{% load blog_tags %}
+{% block title %}register{% endblock %}
+{% block content %}
+    <p>please enter your information:</p>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enter">
+    </form>
+
+{% endblock %}

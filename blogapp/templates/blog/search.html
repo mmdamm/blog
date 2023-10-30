@@ -1,0 +1,34 @@
+{% extends 'parents/base.html' %}
+{% block title %} Search Post{%  endblock %}
+{% block content %}
+    {% if query %}
+        Result for {{ query }} is : {{ result.count }} in posts
+    {% endif %}
+    <br>
+    {% for post in result %}
+        <a href="{{  post.get_absolute_url}}"> {{ post.title }} </a>
+        <p>{{ post.description | truncatewords:4  }}</p>
+        <hr>lk
+        {% empty %}
+        <p>Not Result!!!</p>
+    {% endfor %}
+
+<hr>
+<hr>
+
+
+    {% if query %}
+        Result for {{ query }} is : {{ result_img.count }} in images
+    {% endif %}
+    <br>
+    {% for post in result_img %}
+        <a href="{{  post.get_absolute_url}}"> {{ post.title }} </a>
+        <p>{{ post.description | truncatewords:4  }}</p>
+        <hr>
+    {% empty %}
+       <p>Not Result!!!</p>
+    {% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'parents/base.html' %}
+{% load blog_tags %}
+{% block title %}post comment{% endblock %}
+
+{% block content %}
+
+    {% if comment %}
+        Your comment has been registered.
+        <a href="{{ post.get_absolute_url }}"> Return to Post</a>
+    {% else %}
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Add comment">
+    </form>
+    {% endif %}
+{% endblock %}

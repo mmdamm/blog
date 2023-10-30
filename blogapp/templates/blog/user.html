@@ -1,0 +1,16 @@
+<title>user</title>
+    <p>first_name :{{ request.user.first_name }}</p><img  width="70px"  height="90px" src="{{request.user.account.photo.url}}" alt="{{ request.user.first_name }}">
+    <hr>
+    <p>last_name :{{ request.user.last_name }}</p>
+    <hr>
+    <p>Date of birth :{{ request.user.account.date_of_birth }}</p>
+    <hr>
+    <p>Bio :{{ request.user.account.bio }}</p>
+    <hr>
+    <p>Job :{{ request.user.account.job }}</p>
+    <hr>
+    <h4>post auf dieser user:</h4>
+    {% for img in post %}
+        <P><img  width="400px"  height="350px" src="{{img.image_file.url }}" alt="{{ img.title }}"></P>
+        <BR>
+    {% endfor %}

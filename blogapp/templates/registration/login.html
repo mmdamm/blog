@@ -1,0 +1,12 @@
+    <title>Log in</title>
+    <h3>Log In:</h3>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <input type="hidden" name="next" , value="{{ next }}">
+
+    <input type="submit" value="Enter">
+    <br>
+        <a href="{% url 'blog:password_reset' %}">Have you forgotten your password? click heir</a>
+    </form>
+

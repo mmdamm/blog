@@ -1,0 +1,18 @@
+{% extends 'parents/base.html' %}
+
+{%block title %} Ticket Form{% endblock %}
+{%block content%}
+<h1 class="post-list">Ticket</h1>
+
+    <form method="post">
+    {% csrf_token %}
+
+    {{ form.as_ul }}
+        <input type="submit"
+               ,value="save ticket" >
+
+    </form>
+
+
+
+{% endblock %}

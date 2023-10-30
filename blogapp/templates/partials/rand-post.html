@@ -1,0 +1,4 @@
+{% load blog_tags %}
+<h3>Recommended post for you:</h3>
+<h4>title : <a href="{{ rand.get_absolute_url }}">{{ rand.title }}</a></h4>
+<h4>description : {{ rand.description | cansor |truncatewords_html:10 }}...</h4>

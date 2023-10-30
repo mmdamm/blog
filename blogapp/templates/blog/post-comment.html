@@ -1,0 +1,16 @@
+{% load blog_tags %}
+<title>post_comment</title>
+    <table style="width: 40%; text-align: left;">
+           <tr>
+           <th>Row</th>
+           <th>User name</th>
+           <th>Comment</th>
+           </tr>
+           {% for posts in post %}
+               <tr>
+               <td>{{ forloop.counter }}</td>
+               <td>{{ posts.name }}</td>
+               <td>{{ posts.body |cansor | truncatewords_html:2 }}</td>
+               </tr>
+            {% endfor %}
+</table>

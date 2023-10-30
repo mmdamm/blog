@@ -1,0 +1,45 @@
+{% extends 'parents/base.html' %}
+{% load blog_tags %}
+
+{%block title %} Detail_post{% endblock %}
+{%block content%}
+
+    <h2> Detail post </h2>
+       <h1 class="post-detail" >{{ post.title}}</h1>
+    <p class="author">author: {{ post.author }}</p>
+    <span class="pub-date">{{ post.publish }}</span>
+    <div>
+        {% for img in post.images.all %}
+            <img  width="400px"  height="350px" src="{{img.image_file.url }}" alt="{{ img.title }}">
+            
+        {% endfor %}
+    <hr>
+    </div>
+    <div class="des">
+    <p class="des-p">{{ post.description | cansor | markdown }}</p>
+    </div>
+    <hr>
+
+    {{ time|date:"SHORT_DATETIME_FORMAT" }}
+    <br>
+
+    <div>
+    {% with comments.count as cm_count%}
+    {{ cm_count }} comment{{ cm_count|pluralize }}
+    </div>
+
+     <div>
+     {% for cm in comments %}
+         {{ cm.name |cansor }}:{{ cm.body|cansor |linebreaks }}
+
+     {% empty %}
+         No comment !
+     {% endfor %}
+     </div>
+    {% endwith %}
+    <form method="post" action="{% url 'blog:post_comment' post.id %}">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Add Comment">
+    </form>
+{% endblock %}

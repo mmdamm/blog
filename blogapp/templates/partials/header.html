@@ -1,0 +1,12 @@
+<form method="get" action="{% url "blog:post_search" %}" >
+    {% csrf_token %}
+    <input type="text" name="query" required placeholder="Please enter a text...">
+    <input type="submit" value="Search" >
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'blog:profile' %}">{{ request.user.first_name | default:request.user.username }}</a>
+    {% else %}
+        <a href="{% url 'blog:login' %} ">log in</a>
+    {% endif %}
+    <a href="{% url 'blog:register' %}">register</a>
+
+</form>

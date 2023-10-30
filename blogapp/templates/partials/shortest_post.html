@@ -1,0 +1,6 @@
+
+{% for post in  short_post  %}
+    <P>  <a href="{{ post.get_absolute_url }} ">{{ post.title }}</a></P>
+
+{% endfor %}
+{#{{ short_post }}#}
