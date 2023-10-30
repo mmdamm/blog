@@ -5,6 +5,7 @@ from markdown import markdown
 from django.utils.safestring import mark_safe
 from ..views import *
 import random
+
 register = template.Library()
 
 
@@ -30,24 +31,6 @@ def latest_posts(count=4):
         'l_posts': l_posts
     }
     return context
-
-
-#
-# @register.inclusion_tag("partials/popular_post.html")
-# def most_popular_posts(count=5):
-#      # return Post.published.annotate(comments_count=Count('comments')).order_by('-comments_count')[:count]
-#     post1 = Post.published.filter(max(coount))
-# #     coount = Post.published.filter(comments__created__gte=1)
-# #     post2 = Comment.objects.filter(post__publish__gte=coount)
-# #     # post = (post2).order_by()[:count]
-#     context = {
-#         'post1': post1
-#     }
-#     return context
-# @register.inclusion_tag("partials/popular_post.html")
-# def most_popular_posts():
-#     post = Post.published.annotate(count=post_comment.comment)
-#     return post
 
 
 @register.filter(name="markdown")
@@ -94,6 +77,7 @@ def to_cansor(text):
                 result1[i] = '!!!'
     return " ".join(result1)
 
+
 @register.inclusion_tag('partials/rand-post.html')
 def random_post():
     post = Post.published.all()
@@ -104,8 +88,3 @@ def random_post():
     }
     print(rand)
     return context
-
-
-
-
-

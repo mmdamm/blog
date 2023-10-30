@@ -9,7 +9,7 @@
     <hr>
     <p>Job :{{ request.user.account.job }}</p>
     <hr>
-    <h4>post auf dieser user:</h4>
+    <h4>post from user:</h4>
     {% for img in post %}
         <P><img  width="400px"  height="350px" src="{{img.image_file.url }}" alt="{{ img.title }}"></P>
         <BR>
