@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8014d188-1e4f-414c-a36d-1fbebb873019" name="Changes" comment="" />
+    <list default="true" id="8014d188-1e4f-414c-a36d-1fbebb873019" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +30,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../social" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,6 +79,12 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
   </component>
@@ -129,6 +144,19 @@
       <workItem from="1698667907378" duration="1340000" />
       <workItem from="1698669735541" duration="393000" />
       <workItem from="1698670173235" duration="935000" />
+      <workItem from="1698860988834" duration="522000" />
+      <workItem from="1698861777244" duration="958000" />
+      <workItem from="1699307002971" duration="1392000" />
+      <workItem from="1699308566898" duration="236000" />
+      <workItem from="1699308814907" duration="279000" />
+      <workItem from="1699309278299" duration="10677000" />
+      <workItem from="1699793162510" duration="4044000" />
+      <workItem from="1700041701935" duration="602000" />
+      <workItem from="1700123026888" duration="632000" />
+      <workItem from="1700933155213" duration="329000" />
+      <workItem from="1701540802619" duration="579000" />
+      <workItem from="1701541522354" duration="1331000" />
+      <workItem from="1701544283951" duration="2319000" />
     </task>
     <servers />
   </component>

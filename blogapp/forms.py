@@ -64,7 +64,6 @@ class CreatePostForm(forms.ModelForm):
         fields = ['title', 'description', 'category', 'reading_time']
 
 
-
 class UserRigesterForm(forms.ModelForm):
     password = forms.CharField(max_length=20, widget=forms.PasswordInput(), label='password')
     password2 = forms.CharField(max_length=20, widget=forms.PasswordInput(), label='repeat password')

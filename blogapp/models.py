@@ -70,7 +70,7 @@ class Post(models.Model):
 
 class Ticket(models.Model):
     name = models.CharField(max_length=25)
-    masage = models.TextField(max_length=250)
+    message = models.TextField(max_length=250)
     phone = models.CharField(max_length=11)
     email = models.EmailField()
     subject = models.CharField(max_length=100)

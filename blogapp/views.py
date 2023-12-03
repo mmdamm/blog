@@ -87,7 +87,6 @@ def post_comment(request, post_id):
     return render(request, "forms/comment.html", context)
 
 
-
 def post_search(request):
     query = None
     result = []
